@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+   <t t-extend="ListView.buttons" t-name="open_import_purchase_order.buttons">
+       <t t-jquery="div.o_list_buttons" t-operation="append">
+           <button type="button" class="btn btn-secondary fa fa-upload open_import_purchase_order_action" title="Import" aria-label="Import">
+               Import
+           </button>
+       </t>
+   </t>
+</templates>

@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="oe_styling_v8">
+    <section class="oe_container oe_dark">
+      <div class="oe_row oe_spaced">
+        <h1 style="padding-top:0%; font-weight:300; color:#3d3d3d !important; margin-bottom:18px">
+          <center>How to use the module: Import Purchase Order</center>
+        </h1>
+      </div>
+    </section>
+    <section class="oe_container ">
+      <div class="oe_row oe_spaced">
+        <div class="col-md-12 text-center" style="background-color:#474973; border-radius:5px; margin-bottom:10px">
+          <span style="font-size:25px; color:#fff">
+            <b>Overview</b>
+          </span>
+        </div>
+        <div class="col-md-12">
+          <p class="" style="font-size:20px; font-family:Noto Sans CJK TC Thin; color:#333">
+            The Odoo behavior already has the import function but it is somehow difficult to use especially when you willing to import one2many field or advanced field. For example, to import purchase order with purchase order line it is hard to make it and it is lack of validation on each row of excel too when it cannot find master data.
+            <br/>This is the reason why we build this module to support this need. Meaning that you can import the purchase order with purchase order line by following our template. It will validate all the master data from your file and you can correct into the tree view, and export back for final file excel as well. (See the video demo and user guide as below)
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="oe_container ">
+      <div class="oe_row oe_spaced">
+        <div class="col-md-12 text-center" style="background-color:#474973; border-radius:5px; margin-bottom:10px">
+          <span style="font-size:25px; color:#fff">
+            <b>Features</b>
+          </span>
+        </div>
+        <div class="col-md-12" style="font-size:20px; font-family:Noto Sans CJK TC Thin">
+          Ability to import the excel and csv file by follow the sample template from our third party.<br>
+          Ability to check the valid data on each row of the excel and correct in the tree view directly.<br>
+          Ability to export the tree view back after correction<br>
+
+        </div>
+      </div>
+    </section>
+    <section class="oe_container">
+      <div class="oe_row oe_spaced">
+        <div class="col-md-12 text-center" style="background-color:#474973; border-radius:5px; margin-bottom:10px">
+          <span style="font-size:25px; color:#fff">
+            <b>How it works</b>
+          </span>
+        </div>
+        <div class="col-md-12" style="margin-top:10px; font-size:20px; font-family:Noto Sans CJK TC Thin">
+
+          <a href="https://www.youtube.com/watch?v=rI3ykU7efWc&list=PLsGASyPG2I6xyEGnLwX3HJ99ybk4ai2Tl&index=2" target="_blank">
+             <i class="fa fa-youtube"></i> Watch on YouTube for demo
+          </a><br/><br/>
+<!--          <h4 class="oe_slogan">-->
+<!--            <a href="https://youtu.be/dUAatsh1RBA" target="_blank" style="color:#FFFFFF !important; border-radius:0; background-color:#474973; border-color:#005ca7; padding:15px; font-weight:bold">-->
+<!--              <i class="fa fa-youtube"></i> Watch on YouTube </a>-->
+<!--          </h4>-->
+        </div>
+        <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>To make this module work in your database. You have to follow these steps as below:</p>
+          <p>Step 1: Purchase this module </p>
+          <p>Step 2: Copy and paste this module to your folder custom addons </p>
+          <p>Step 3: Rebuild your server</p>
+          <p>Step 4: Install app </p>
+        </div>
+        <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>After install the app, then you will be able to use the feature in this module as the below demonstration:</p><br/>
+          <p>Step 1: Go to Purchase > Order > Import Purchase Order, then you will see the tree view of import purchase order. You can delete those previous import data and reimport the new one by clicking the button Import.</p><br/>
+          <img src="img/step1.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+        </div>
+
+         <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>Step 2:  When clicking import, you will see the popup as below screenshot. You can upload your excel file but MUST follow our format (You can download the sample one first). If you have done your excel then click to upload file and hit the import after.</p><br/>
+          <img src="img/step2.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+        </div>
+
+        <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>Step 3: After you import successfully, then you will see your data from excel into the tree view, and the tree view will tell you if each row has the problem or no. We need to correct the problem if you prefer to import that row because our import function will not import the row which has problem. Status is to tell you if you already sync or not yet. You can sync as many time as you want but if the purchase order exist, it will merge the order line.</p><br/>
+          <img src="img/step3.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+        </div>
+
+        <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>Step 4: Tick Each Row you want to import or you can click all then you will see the sync button </p><br/>
+          <img src="img/step4.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+        </div>
+
+        <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>Step 5: When you click Sync butotn, it will show the popup for you to choose if you want to auto confirm purchase order, or just a draft as below screenshot.</p><br/>
+          <img src="img/step5.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+        </div>
+
+        <div class="col-md-12 " style="font-size:20px; font-family:Noto Sans CJK TC Thin; margin-bottom:18px">
+          <p>Step 6: Click Button Sync Now, then it will import all row you checked into purchase order accordingly as below result:</p><br/>
+          <img src="img/step6.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+          <img src="img/step7.PNG" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+        </div>
+      </div>
+    </section>
+    <section class="oe_container ">
+      <div class="oe_row oe_spaced">
+        <div class="col-md-12 text-center" style="background-color:#474973; border-radius:5px; margin-bottom:10px">
+          <span style="font-size:25px; color:#fff">
+            <b>Support Information</b>
+          </span>
+        </div>
+        <div class="col-md-12" style="font-size:20px; font-family:Noto Sans CJK TC Thin">
+          <p class="text-center">You will get 60 days free support for any question, queries, and bug fixing (excluding data recovery) concerned with this module. </p>
+          <p class="text-center">
+            <b>This support will be counted after the purchase date. </b>
+          </p>
+          <p class="text-center">Please do not share it with the others after purchasing.</p>
+        </div>
+      </div>
+    </section>
+    <section class="oe_container ">
+      <div class="oe_row oe_spaced">
+        <div class="col-md-12 text-center" style="background-color:#474973; border-radius:5px; margin-bottom:10px">
+          <span style="font-size:25px; color:#fff">
+            <b>Help and Support</b>
+          </span>
+        </div>
+        <div class="col-md-12" style="font-size:20px; font-family:Noto Sans CJK TC Thin">
+          <p class="text-center">For any supports or help, do not hesitate to ask me by this email myodooexpert.gmail.com. We can help for your Odoo implementation and develop the custom module with low price.
+          </p>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+</div> 

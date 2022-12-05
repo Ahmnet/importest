@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_import_purchase_order_form" model="ir.ui.view">
+        <field name="name">view.import.purchase.order.form</field>
+        <field name="model">import.purchase.order</field>
+        <field name="arch" type="xml">
+            <form string="Import Purchase Order">
+                <sheet>
+                    <group>
+                        <field name="x_po_number" required="1"/>
+                        <field name="x_vendor_name" required="1"/>
+                        <field name="x_vendor_reference"/>
+                        <field name="x_confirmation_date"/>
+                        <field name="x_receipt_date"/>
+                    </group>
+                    <group>
+                        <field name="x_product_name" required="1"/>
+                        <field name="x_quantity" required="1"/>
+                        <field name="x_uom" required="1"/>
+                        <field name="x_price" required="1"/>
+                        <field name="x_tax" />
+                        <field name="x_problem"/>
+                        <field name="x_status"/>
+                        <field name="x_vendor_id"/>
+                        <field name="x_product_id"/>
+                        <field name="x_uom_id"/>
+                        <field name="x_tax_ids"/>
+                        <field name="x_tax_problem"/>
+                        <field name="x_check_confirmation_date"/>
+                        <field name="x_check_receipt_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_import_purchase_order_tree" model="ir.ui.view">
+        <field name="name">view.import.purchase.order.tree</field>
+        <field name="model">import.purchase.order</field>
+        <field name="arch" type="xml">
+            <tree string="Import Purchase Order" multi_edit="1" editable="top" create="0">
+                <header>
+                    <button name="sync_purchase_order" type="object" class="btn btn-primary" string="Sync"/>
+                </header>
+                <field name="x_po_number" required="1"/>
+                <field name="x_vendor_name" required="1"/>
+                <field name="x_vendor_reference"/>
+                <field name="x_confirmation_date"/>
+                <field name="x_receipt_date"/>
+                <field name="x_product_name" required="1"/>
+                <field name="x_quantity" required="1"/>
+                <field name="x_uom"/>
+                <field name="x_price"/>
+                <field name="x_tax"/>
+                <field name="x_problem"  widget="html" decoration-danger="1"/>
+                <field name="x_status" widget="badge" decoration-success="x_status == 'synced'" decoration-info="x_status == 'not_sync'"/>
+                <field name="x_vendor_id" invisible="1"/>
+                <field name="x_product_id" invisible="1"/>
+                <field name="x_uom_id" invisible="1"/>
+                <field name="x_tax_ids" invisible="1"/>
+                <field name="x_tax_problem" invisible="1"/>
+                <field name="x_check_confirmation_date" invisible="1"/>
+                <field name="x_check_receipt_date" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="import_purchase_order_inherited_tree_view" model="ir.ui.view">
+           <field name="name">import.purchase.order.view.tree.inherit</field>
+           <field name="model">import.purchase.order</field>
+           <field name="inherit_id" ref="view_import_purchase_order_tree"/>
+           <field name="arch" type="xml">
+               <xpath expr="//tree" position="attributes">
+                   <attribute name="js_class">import_purchase_order_in_tree</attribute>
+               </xpath>
+           </field>
+       </record>
+
+    <record id="action_access_import_purchase_order" model="ir.actions.act_window">
+        <field name="name">Import Purchase Order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.purchase.order</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            <!-- Add Text Here -->
+          </p><p>
+            <!-- More details about what a user can do with this object will be OK -->
+          </p>
+        </field>
+    </record>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="import_purchase_order_parent_menu" name="Import" parent="purchase.menu_procurement_management" sequence="16"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="import_purchase_order_menu" name="Import Purchase Order" parent="import_purchase_order_parent_menu" action="action_access_import_purchase_order" sequence="1"/>
+</odoo>
