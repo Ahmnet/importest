@@ -16,3 +16,4 @@
 
 ==> 15.0.0.5 : Add a new CSV & Excel button for(Download Sample CSV & Excel file) in  wizard 
 15.0.0.6 ==>fixed issue of internal ref when importing products.
+15.0.0.7 ==> changed name of id in menu because it was same to access id in csv.
